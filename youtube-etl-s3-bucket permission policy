@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowLambdaReadObjects",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::941614911766:role/youtube-etl-lambda-role"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::youtube-etl-s3-bucket/*/*"
+        }
+    ]
+}
